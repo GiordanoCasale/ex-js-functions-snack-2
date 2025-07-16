@@ -66,14 +66,18 @@ timer();
 
 //snack 5
 
-// Funzione che stampa un messaggio in console
-function messaggino() {
-    console.log("sei il più forte");
+// Funzione che stampa un messaggio in console ogni secondo
+function stampaOgniSecondo(messaggio) {
+    // setInterval esegue la funzione passata come primo argomento ogni 1000 millisecondi (1 secondo)
+    setInterval(() => {
+        // Stampa il messaggio ricevuto come parametro
+        console.log(messaggio);
+    }, 1000); // intervallo di 1 secondo (1000 ms)
 }
 
-
-// Avvia un intervallo che chiama messaggino ogni 1000 ms (1 secondo)
-setInterva(messaggino, 1000);
+// Avvia un intervallo che chiama la funzione stampaOgniSecondo con il messaggio "eccoci qua"
+// Ogni secondo verrà stampato "eccoci qua" in console
+stampaOgniSecondo("eccoci qua")
 
 //snack 6
 
